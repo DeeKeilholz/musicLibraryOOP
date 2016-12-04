@@ -6,7 +6,6 @@
 // Tracks
 
 
-
 // prototye function Library
 class Library {
   constructor(name, creator) {
@@ -26,9 +25,6 @@ class Library {
 
 // end of class Library
 }
-
-
-
 
 
 // prototye function Playlist
@@ -70,8 +66,6 @@ class Playlists {
 }
 
 
-
-
 // prototye function Tracks
 class Tracks {
   constructor(title, rating, length) {
@@ -89,39 +83,31 @@ class Tracks {
 
 }
 
-
-
-
-
 // new instance of class Tracks
 newTrackFirst = new Tracks("some track", 3, 120)
-
 newTrackSecond = new Tracks("another track", 5, 180)
-
 newTrackThird = new Tracks("last track", 1, 320)
-
-
 
 
 // new instance of class Playlists
 playlistFirst = new Playlists("some playlist")
-
 playlistFirst.addTracksToPlaylist(newTrackFirst);
 playlistFirst.addTracksToPlaylist(newTrackSecond);
 
-
 playlistSecond = new Playlists("some playlist")
-
+playlistSecond.addTracksToPlaylist(newTrackThird);
 
 
 // new instance of class Library (aka oject)
 libraryInfo = new Library("My music Library", "Dee")
-
 libraryInfo.addPlaylistToLibrary(playlistFirst)
 
 
-console.log(newTrackFirst)
+
 console.log(libraryInfo);
-console.log(playlistFirst)
+console.log(playlistFirst);
 console.log(Math.round(playlistFirst.totalDuration()) + ' minutes')
 console.log(playlistFirst.overallRating() + ' stars')
+console.log(playlistSecond);
+console.log(Math.round(playlistSecond.totalDuration()) + ' minutes')
+console.log(playlistSecond.overallRating() + ' stars')
